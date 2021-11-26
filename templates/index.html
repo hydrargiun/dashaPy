@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/calendar.css')}}">
+</head>
+<body>
+<div class="calendar-container">
+  <div class="calendar-header">
+    <h1>
+       Декабрь
+    </h1>
+     <h3>
+         Кузнецова Дарья C21-712
+     </h3>
+    <p>2021</p>
+  </div>
+  <div class="calendar"><span class="day-name">Mon</span><span class="day-name">Tue</span><span class="day-name">Wed</span><span class="day-name">Thu</span><span class="day-name">Fri</span><span class="day-name">Sat</span><span class="day-name">Sun</span>
+    <div class="day day--disabled">30</div>
+    <div class="day day--disabled">31</div>
+    <div class={{ day_name[1] }}>{{ day_mas[1] }}</div>
+    <div class={{ day_name[2] }}>{{ day_mas[2] }}</div>
+    <div class={{ day_name[3] }}>{{ day_mas[3] }}</div>
+    <div class={{ day_name[4] }}>{{ day_mas[4] }}</div>
+    <div class={{ day_name[5] }}>{{ day_mas[5] }}</div>
+    <div class={{ day_name[6] }}>{{ day_mas[6] }}</div>
+    <div class={{ day_name[7] }}>{{ day_mas[7] }}</div>
+    <div class={{ day_name[8] }}>{{ day_mas[8] }}</div>
+    <div class={{ day_name[9] }}>{{ day_mas[9] }}</div>
+    <div class={{ day_name[10] }}>{{ day_mas[10] }}</div>
+    <div class={{ day_name[11] }}>{{ day_mas[11] }}</div>
+    <div class={{ day_name[12] }}>{{ day_mas[12] }}</div>
+    <div class={{ day_name[13] }}>{{ day_mas[13] }}</div>
+    <div class={{ day_name[14] }}>{{ day_mas[14] }}</div>
+    <div class={{ day_name[15] }}>{{ day_mas[15] }}</div>
+    <div class={{ day_name[16] }}>{{ day_mas[16] }}</div>
+    <div class={{ day_name[17] }}>{{ day_mas[17] }}</div>
+    <div class={{ day_name[18] }}>{{ day_mas[18] }}</div>
+    <div class={{ day_name[19] }}>{{ day_mas[19] }}</div>
+    <div class={{ day_name[20] }}>{{ day_mas[20] }}</div>
+    <div class={{ day_name[21] }}>{{ day_mas[21] }}</div>
+    <div class={{ day_name[22] }}>{{ day_mas[22] }}</div>
+    <div class={{ day_name[23] }}>{{ day_mas[23] }}</div>
+    <div class={{ day_name[24] }}>{{ day_mas[24] }}</div>
+    <div class={{ day_name[25] }}>{{ day_mas[25] }}</div>
+    <div class={{ day_name[26] }}>{{ day_mas[26] }}</div>
+    <div class={{ day_name[27] }}>{{ day_mas[27] }}</div>
+    <div class={{ day_name[28] }}>{{ day_mas[28] }}</div>
+    <div class={{ day_name[29] }}>{{ day_mas[29] }}</div>
+    <div class={{ day_name[30] }}>{{ day_mas[30] }}</div>
+    <div class={{ day_name[31] }}>{{ day_mas[31] }}</div>
+    <div class="day day--disabled">1</div>
+    <div class="day day--disabled">2</div>
+    <div class={{ day }}>{{ today }}</div>
+    <section class="task task--warning">Projects</section>
+    <section class="task task--danger">Design Sprint</section>
+    <section class="task task--primary">Product Checkup 1
+      <div class="task__detail">
+        <h2>Product Checkup 1</h2>
+        <p>15-17th November</p>
+      </div>
+    </section>
+    <section class="task task--info">Product Checkup 2</section>
+  </div>
+</div>
+</body>
+</html>

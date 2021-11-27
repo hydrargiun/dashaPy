@@ -279,7 +279,7 @@ body {
   height: 100%;
   width: 100%;
   border-color: rgba(0,0,0,0);
-  /*background-color: rgba(0,0,0,0);*/
+  background-color: rgba(0,0,0,0);
 }
 .modal {
   display: none; /* Hidden by default */
@@ -344,7 +344,8 @@ body {
   z-index: 5;
 }
 .modal-header h2{
-  color: rgba(152, 160, 166, 0.6);
+  color: rgba(255, 236, 236, 0.84);
+  font-size: larger;
   font-family: Montserrat, "sans-serif";
 }
 .modal-body {

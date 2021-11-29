@@ -24,3 +24,6 @@ function close_it(id) {
     modal.style.display = "none";
 
 }
+function func_task(id){
+	window.location.href = "/add_task?day_id=" + id;
+}

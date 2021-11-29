@@ -1,7 +1,24 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 from datetime import date
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+dayID = 0
+
+class Article(db.Model):
+    id = db.Column(db.INTEGER, primary_key=True)
+    day_id = db.Column(db.INTEGER, nullable=False)
+    subject = db.Column(db.String(50), nullable=False)
+    link = db.Column(db.String(50), default=None)
+    homework = db.Column(db.TEXT, default=None)
+
+    def __repr__(self):
+        return '<Article %r>' % self.id
+
+
 day_header = [None] * 32
 raw = 0
 for x in range(1, 32):
@@ -21,6 +38,23 @@ for x in range(1, 32):
     elif x - (7 + (raw - 1) * 7) == 0:
         day_header[x] = 'Вторник'
 day_header[0] = 0
+
+
+@app.route('/add_task', methods=['POST', 'GET'])
+def add_task():
+    if request.method == 'POST':
+        day_id = request.args.get('day_id')
+        title = request.form['title']
+        task_node = Article()
+    if request.method == 'GET':
+        day_id = request.args.get('day_id')
+        if day_id is not None:
+            if 1 <= int(day_id) <= 31:
+                pass
+        else:
+            return "Инвалид."
+    option = ['1', '2', '3', '4']
+    return render_template('add_task.html', option=option)
 
 
 @app.route('/')

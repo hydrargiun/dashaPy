@@ -1,0 +1,26 @@
+Лек=Экономика=https://us04web.zoom.us/j/2926799712?pwd=h6oXTduZWjw0u4Etc5bEBlMLiJq6ew
+Лек=Математический анализ=https://meet.mephi.ru/sagrishin/CGVH3O4A
+Лек=История=https://meet.mephi.ru/vamakedonskaya/PZS8JFME
+Лек=Право=https://us02web.zoom.us/j/85348522038
+Пр=Экономика=https://meet.mephi.ru/gipopova/LIKB8W40
+BEGIN
+Пр=Физическая культура=каф15
+Пр=Физика=K-207
+Пр=Иностранный язык=NO
+BEGIN
+Лек=НСПФТ=https://us02web.zoom.us/j/5088563871?pwd=akxEZUI1Uk1nQTFKUTVLem8zZ2IrQT09
+Лек=Аналитическая геометрия=https://zoom.us/j/97371298281?pwd=VUpUSmN0TkNKSjRnUlFjdXYyckxDdz09
+Пр=Иностранный язык=https://meet.mephi.ru/nazhuravleva/5SZNGLG7
+Пр=История=https://meet.mephi.ru/vamakedonskaya/PZS8JFME
+BEGIN
+Лек=Информационная безопасность=https://meet.mephi.ru/aamalyuk/SJ5Y4CMZ
+Лек=Физика=https://zoom.us/j/3102499704?pwd=SngycTlMcEkxOEZhbWo1Q1A1RldGdz09
+Пр=Физическая культура=ДОТ
+Пр=Право=https://us02web.zoom.us/j/85348522038
+BEGIN
+Пр=Математический анализ=Б-208
+Пр=Аналитическая геометрия=Б-208
+Лаб=Информатика=К-807
+Лаб=Физика=А-312
+Пр=НСПДФТ=К-1006
+Пр=Информатика=К-807

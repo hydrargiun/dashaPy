@@ -24,8 +24,11 @@ function close_it(id) {
     modal.style.display = "none";
 
 }
-function func_task(id){
-	window.location.href = "/add_task?day_id=" + id;
+function func_task(day_id, year_id, month_id){
+	window.location.href = "/add_task?day_id=" + day_id + "&" + "year_id=" + year_id + "&" +"month_id=" + month_id;
+}
+function get_task(day_id, year_id, month_id){
+	window.location.href = "/get_task?day_id=" + day_id + "&" + "year_id=" + year_id + "&" +"month_id=" + month_id;
 }
 function move_right(month,year){
     if (month === 12) {

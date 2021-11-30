@@ -27,3 +27,17 @@ function close_it(id) {
 function func_task(id){
 	window.location.href = "/add_task?day_id=" + id;
 }
+function move_right(month,year){
+    if (month === 12) {
+        year = year + 1
+        month = 0
+    }
+	window.location.href = "/?month=" + (month + 1) + "&" + "year=" + year;
+}
+function move_left(month,year){
+    if (month === 1) {
+        year = year -1
+        month = 13
+    }
+	window.location.href = "/?month=" + (month - 1) + "&" + "year=" + year;
+}

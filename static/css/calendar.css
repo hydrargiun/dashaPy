@@ -388,4 +388,22 @@ body {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.6);
 }
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    text-indent: 30px
+}
+
 

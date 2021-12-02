@@ -102,16 +102,22 @@ def get_task():
 def add_task():
     if request.method == 'POST':
         day_id = request.args.get('day_id')
-        title = request.form['title']
+        month_id = request.args.get('month_id')
+        year_id = request.args.get('year_id')
+        subject = request.form['subject']
+        homework = request.form['homework']
+        Node = Article.query.filter_by(month_id=month_id, year_id="20" + year_id, day_id=day_id,
+                                       subject=subject)
+        if Node is not None:
+            Node.update(dict(homework=homework, is_homework_exists=1))
+            db.session.commit()
+        return '0'
     if request.method == 'GET':
         day_id = request.args.get('day_id')
-        if day_id is not None:
-            if 1 <= int(day_id) <= 31:
-                pass
-        else:
-            return "Инвалид."
-    option = ['1', '2', '3', '4']
-    return render_template('add_task.html', option=option)
+        month_id = request.args.get('month_id')
+        year_id = request.args.get('year_id')
+        classes = return_one_day(day_id, year_id, month_id)
+        return render_template('add_task.html', classes=classes, size=len(classes))
 
 
 @app.route('/', methods=['GET'])

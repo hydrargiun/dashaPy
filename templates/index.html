@@ -36,16 +36,15 @@
                             <h2><span class="naming">{{ day_header[day_num] }}</span>
                                 <a class="btn btn-success"
                                    onclick="func_task({{ day_num }},{{ year }},{{ working_month }})">Добавить</a>
-                                <a class="btn btn-success"
-                                   onclick="get_task({{ day_num }},{{ year }},{{ working_month }})">Показать</a>
                             </h2>
                         </div>
                         <div class="modal-body">
                             {% for day in classes %}
                                 {% if day.day_id == day_num %}
                                     <p></p><span class="label {{ day.type }}">{{ day.type }}</span>
-                                    <span>{{ day.subject }}</span>
-                                    <span class="homework {{ "Home" + day.is_homework_exists }}">{{ day.homework }}</span>
+                                    <span class="showday"
+                                          onclick="get_task({{ day_num }},{{ year }},{{ working_month }})">{{ day.subject }}</span>
+                                    <span class="homework {{ "Home" + day.is_homework_exists }}">Найдено: {{day.is_homework_exists }} ДЗ</span>
                                 {% endif %}
                             {% endfor %}
                         </div>

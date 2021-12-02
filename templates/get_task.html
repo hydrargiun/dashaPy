@@ -1,15 +1,16 @@
-<link rel="stylesheet" href="{{ url_for('static', filename='css/ger_task.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/get_task.css') }}">
 <div class="tasks">
     <!-- title -->
     <h1>{{ header + " 20" + year_id + '-' + month_id +'-'+ day_id }}</h1>
     <!-- task 1 -->
     {% for ptr in range(0,size) %}
-    <input id='label-{{ (ptr + 1)|string }}' type='checkbox' checked/>
-    <label for='label-{{ (ptr + 1)|string }}'>
-        <h2>{{ classes[ptr].subject }}
-            <span class="Home{{ classes[ptr].is_homework_exists }}">{{ classes[ptr].homework }}</span>
-        </h2>
-    </label>
+        <input id='label-{{ (ptr + 1)|string }}' type='checkbox' checked/>
+        <label for='label-{{ (ptr + 1)|string }}'>
+            <h2><a class="type {{ classes[ptr].type }}">{{ classes[ptr].type }}</a>{{ "  "+ classes[ptr].subject }}
+                <p></p>
+                <span class="Home{{ classes[ptr].is_homework_exists }}">{{ classes[ptr].homework }}</span>
+            </h2>
+        </label>
     {% endfor %}
 
 
